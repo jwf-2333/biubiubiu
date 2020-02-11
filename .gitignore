@@ -1,0 +1,3 @@
+# .gitignore忽略列表文件 凡是能够匹配到一下规则的文件 git 仓库不进行管理
+end/project1/.idea
+end/project1/venv
