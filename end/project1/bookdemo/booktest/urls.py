@@ -10,4 +10,6 @@ urlpatterns = [
     url(r'^deletehero/(\d+)/$',views.deletehero,name='deletehero'),
     url(r'^addhero/(\d+)/$',views.addhero,name='addhero'),
     url(r'^edithhero/(\d+)/$', views.edithhero, name='edithhero'),
+    url(r'^addbook/$',views.addbook,name='addbook'),
+    url(r'^edithbook/(\d+)/$',views.edithbook,name='edithbook'),
 ]

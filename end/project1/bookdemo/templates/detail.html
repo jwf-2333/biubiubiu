@@ -12,7 +12,7 @@
          <ul>
             {% for hero in book.hero_set.all %}
                 <li>
-                    {{hero.name}}--{{hero.gender}}
+                    {{hero.name}}--{{hero.gender}}--{{hero.content}}
                     <a href="{% url 'booktest:deletehero' hero.id %}">删除</a>
                     <a href="{% url 'booktest:edithhero' hero.id %}">修改</a>
                 </li>

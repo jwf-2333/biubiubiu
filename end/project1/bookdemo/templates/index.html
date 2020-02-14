@@ -21,11 +21,14 @@
                             {#<a href="/detail/{{book.id}}/">{{book.id}}--{{book.title}}--{{book.price}}</a>#}
                             <a href="{% url 'booktest:detail' book.id %}">{{book.id}}--{{book.title}}--{{book.price}}</a>
                             <a href="{% url 'booktest:deletebook' book.id %}">删除</a>
+                            <a href="{% url 'booktest:edithbook' book.id %}">修改</a>
                         </li>
                     {% endfor %}
                 </ul>
             </p>
         </div>
+         <a href="{% url 'booktest:addbook' %}">添加书籍</a>
     </div>
+
 </body>
 </html>
