@@ -76,7 +76,10 @@ def edithhero(request,heroid):
         return redirect(to=url)
 
 def deletehero(request,heroid):
+    # 惰性查询  能不操作数据库就不操作  不得已才操作   hero=Hero.objects.get(id=heroid)并没有操作数据库
     hero=Hero.objects.get(id=heroid)
+    # 如果访问hero中的对象  不操作数据库得不到数据  此时才是真正操作数据库
+    print(hero.book)
     bookid = hero.book.id
     hero.delete()
     url =reverse('booktest:detail',args=(bookid,))
