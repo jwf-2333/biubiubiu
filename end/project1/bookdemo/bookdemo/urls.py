@@ -15,7 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-
+# 使用媒体资源
+from django.views.static import serve
 
 # from django.http import HttpResponse
 # def index(request):
@@ -32,6 +33,9 @@ urlpatterns = [
 
     path('polls/',include('polls.urls',namespace='polls')),
 
+
+
     path('',include('booktest.urls',namespace='booktest')),
+
 
 ]

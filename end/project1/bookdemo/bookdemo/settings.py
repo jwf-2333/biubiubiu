@@ -24,8 +24,10 @@ SECRET_KEY = '1283u#=0(f7zf$7cj^bhrodb1(-iji0*&)&_(3b=ob0luq%6+b'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-ALLOWED_HOSTS = []
+# 只有关掉调试模式才能显示出404之类的错误  上线之后才设置False
+# DEBUG = False
+# 如果DEBUG设置为False  ALLOWED_HOSTS 代表那些域名ip电脑可以访问服务
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
