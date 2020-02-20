@@ -1,6 +1,18 @@
 from django.db import models
 
+# 使用了django自带的用户系统
+from django.contrib.auth.models import AbstractUser
 # Create your models here.
+
+#
+class User(AbstractUser):
+    """"
+    自定义用户类型继承django自带用户系统
+    """
+    telephone = models.CharField(max_length=20,verbose_name="手机号")
+    questions = models.ManyToManyField('Question')
+
+
 class Question(models.Model):
     """"
     投票问题类

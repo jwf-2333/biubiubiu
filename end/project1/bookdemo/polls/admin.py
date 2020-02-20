@@ -17,3 +17,4 @@ class ChoiceAdmin(admin.ModelAdmin):
 
 admin.site.register(Question,QuestionAdmin)
 admin.site.register(Choices,ChoiceAdmin)
+admin.site.register(User)

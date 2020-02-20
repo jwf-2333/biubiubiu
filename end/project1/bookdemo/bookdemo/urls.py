@@ -33,7 +33,7 @@ urlpatterns = [
 
     path('polls/',include('polls.urls',namespace='polls')),
 
-
+    path('download/', include('download.urls', namespace='download')),
 
     path('',include('booktest.urls',namespace='booktest')),
 
